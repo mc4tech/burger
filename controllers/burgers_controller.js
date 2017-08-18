@@ -24,11 +24,15 @@ router.post("/burgers/create", function(req,res) {
 	// console.log(req);
 	// console.log("router.post res : ");
 	// console.log(res);
-	burger.create(req.body.burger_name, function(data) {
-		console.log("router.post burger.create cb data: ")
-		console.log(data);
-		res.redirect("/");
-	});
+	if(req.body.burger_name === "" || undefined) {
+		console.log("must enter at least one char");
+	}else {
+		burger.create(req.body.burger_name, function(data) {
+			console.log("router.post burger.create cb data: ")
+			console.log(data);
+			res.redirect("/");
+		});
+	}
 });
 
 router.put("/burgers/update", function(req, res) {

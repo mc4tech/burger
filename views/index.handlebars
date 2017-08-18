@@ -5,13 +5,10 @@
 			<h1> Eat-Da-Burger! </h1>
 		</div>
 		<div class="col-xs-12 col-sm-6">
-			<!-- <div class="row"> -->
 			  {{#each burger_data}}
 			  	{{#unless this.devoured}}
 				<div class="col-xs-12 col-sm-9 burgerDiv">
 					<h5>{{this.id}}. {{this.burger_name}}</h5>
-					
-				  		<!-- {{this.Date}} -->
 				</div>
 				<div class="col-xs-12 col-sm-3">
 					<form method="POST" action="/burgers/update?_method=PUT" class="button-size">
@@ -21,7 +18,6 @@
 				</div>
 				{{/unless}}
 			  {{/each}}
-			<!-- </div> -->
 		</div>
 		<div class="col-xs-12 col-sm-6 devoured">
 			  {{#each burger_data}}
