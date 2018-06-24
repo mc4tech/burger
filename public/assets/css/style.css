@@ -14,6 +14,24 @@ body {
   background-color: #333;
 }
 
-.btn {
-	background-color: #1565c0;
+.btn, .btn:hover, .btn:focus {
+  background-color: #1565c0;
 }
+
+.input-field .prefix.active {
+  color: #1565c0;
+}
+
+#enter_text {
+  color: #fff;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #1565c0
+}
+
+;
