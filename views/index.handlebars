@@ -14,6 +14,7 @@
 				<div class="col s12">
 					<form method="POST" action="/burgers/update?_method=PUT" class="button-size">
 						<input input type="hidden" type="text" name="burger_id" value= {{this.id}}><br>
+						<input input type="hidden" type="text" name="devoured" value= {{this.devoured}}><br>
 						<button type="submit" class="waves-effect waves-light btn  blue darken-3">Devour it!<i class="material-icons left">local_dining</i></button>
 					</form>
 				</div>
@@ -24,6 +25,13 @@
 		{{#each burger_data}}
 			{{#if this.devoured}}
 				<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
+				<div class="col s12">
+					<form method="POST" action="/burgers/update?_method=PUT" class="button-size">
+						<input input type="hidden" type="text" name="burger_id" value= {{this.id}}><br>
+						<input input type="hidden" type="text" name="devoured" value= {{this.devoured}}><br>
+						<button type="submit" class="waves-effect waves-light btn  blue darken-3">Order Again!<i class="material-icons left">local_dining</i></button>
+					</form>
+				</div>
 			{{/if}}
 		{{/each}}
 	</div>
